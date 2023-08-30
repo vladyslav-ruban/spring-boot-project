@@ -3,15 +3,16 @@
 Install Docker before use
 
 Create mysql database before use:
--Pull mysql image from docker:
+
+1. Pull mysql image from docker:
 docker pull mysql
--Run mysql container:
+2. Run mysql container:
 docker run -e MYSQL_ROOT_PASSWORD=test -p 3306:3306 -d mysql:latest
--Switch to bash inside docker container:
+3. Switch to bash inside docker container:
 docker exec -it CONTAINER_ID bash
--Switch to root user:
+4. Switch to root user:
 mysql -u root -p
--Create table using script in create-table-script.mysql
+5. Create table using script in create-table-script.mysql
 
 
 Run main method from IntelliJ IDEA, send requests to localhost:8080
