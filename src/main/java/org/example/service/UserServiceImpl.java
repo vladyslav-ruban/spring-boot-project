@@ -1,18 +1,19 @@
 package org.example.service;
 
 import org.example.model.UserModel;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @Service
-@Qualifier("primary")
 public class UserServiceImpl implements UserService {
+    private final TimeService timeService;
     private Map<String, UserModel> userMap = new HashMap<>();
 
-    public UserServiceImpl() {
+
+    public UserServiceImpl(TimeService timeService) {
+        this.timeService = timeService;
         userMap.put("John", new UserModel("John", "Doe", 1234));
         userMap.put("Jane", new UserModel("Jane", "Doe", 4321));
     }
@@ -22,6 +23,8 @@ public class UserServiceImpl implements UserService {
     }
 
     public void addUser(UserModel user) {
+
+        user.setCreationTime(timeService.getCurrentTime("Madrid"));
         userMap.put(user.getFirstName(), user);
     }
 
