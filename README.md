@@ -12,7 +12,7 @@ docker exec -it CONTAINER_ID bash
 -Switch to root user:
 mysql -u root -p
 -Create table using script in create-table-script.mysql
--
+
 
 Run main method from IntelliJ IDEA, send requests to localhost:8080
 Endpoints with examples:
