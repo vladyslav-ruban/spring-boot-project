@@ -1,9 +1,9 @@
-package org.example.service;
+package org.example.services;
 
 import kong.unirest.HttpResponse;
 import kong.unirest.Unirest;
 import org.example.configuration.WorldTimeApiConfig;
-import org.example.model.WorldTimeApiResponse;
+import org.example.models.WorldTimeApiResponse;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,7 +1,7 @@
 package org.example.controllers;
 
-import org.example.model.UserModel;
-import org.example.service.UserService;
+import org.example.models.UserModel;
+import org.example.services.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +11,7 @@ import java.util.Optional;
 @RestController
 public class UserController {
 
-    private UserService service;
+    private final UserService service;
 
     public UserController(UserService userService) {
         this.service = userService;

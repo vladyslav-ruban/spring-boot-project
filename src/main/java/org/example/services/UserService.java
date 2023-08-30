@@ -1,6 +1,6 @@
-package org.example.service;
+package org.example.services;
 
-import org.example.model.UserModel;
+import org.example.models.UserModel;
 
 public interface UserService {
     UserModel getUser(String userName);

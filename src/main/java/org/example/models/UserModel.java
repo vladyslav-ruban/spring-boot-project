@@ -1,19 +1,26 @@
-package org.example.model;
+package org.example.models;
 
 public class UserModel {
 
     private String firstName;
-    private String secondName;
+    private String lastName;
     private Integer membershipId;
     private String creationTime;
 
     public UserModel() {
     }
 
-    public UserModel(String firstName, String secondName, Integer membershipId) {
+    public UserModel(String firstName, String lastName, Integer membershipId) {
         this.firstName = firstName;
-        this.secondName = secondName;
+        this.lastName = lastName;
         this.membershipId = membershipId;
+    }
+
+    public UserModel(String firstName, String lastName, Integer membershipId, String creationTime) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.membershipId = membershipId;
+        this.creationTime = creationTime;
     }
 
     public String getCreationTime() {
@@ -32,12 +39,12 @@ public class UserModel {
         this.firstName = firstName;
     }
 
-    public String getSecondName() {
-        return secondName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public Integer getMembershipId() {
