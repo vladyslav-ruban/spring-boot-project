@@ -1,0 +1,6 @@
+world-time-api:
+    endpoint: "http://worldtimeapi.org/api/timezone/"
+    continent: "Europe"
+
+server:
+    port: 8080
